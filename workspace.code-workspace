@@ -1,0 +1,50 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {},
+  "launch": {
+    "configurations": [
+      {
+        "command": "npm run dev",
+        "name": "Run dev",
+        "request": "launch",
+        "type": "node-terminal",
+        "preLaunchTask": "build"
+      },
+      {
+        "command": "npm start",
+        "name": "Run production",
+        "request": "launch",
+        "type": "node-terminal",
+        "preLaunchTask": "build"
+      }
+    ],
+    "compounds": []
+  },
+  "extensions": {
+    "recommendations": [
+      "svelte.svelte-vscode",
+      "ecmel.vscode-html-css",
+      "CoenraadS.bracket-pair-colorizer",
+      "ms-vscode.js-debug"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "label": "build",
+        "type": "shell",
+        "command": "npm run build",
+        "problemMatcher": []
+      }
+    ]
+  }
+}
